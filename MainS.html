@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background-image:url('RaptorC.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px 0px;
+            
+        }
+        #header {
+            background-image: linear-gradient(to left, rgb(62, 71, 85), rgb(0, 18, 50) );
+            color: rgb(255, 255, 255);
+            padding: 30px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1620px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .side-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .side-menu li {
+            margin-right: 20px;
+        }
+        .side-menu li:hover {
+            text-decoration: underline;
+            color: rgb(255, 255, 255);   /*[CTRL+Shif]Transform:scale:;*/
+            cursor: pointer;
+        }
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .m {
+        width: 600px;height: 200px;
+        margin: 0 auto;
+        padding: 20px 450px;
+        }
+        .b{
+            position: absolute;
+            background-position: bottom;
+
+        }
+
+        #footer {
+            background-color: #000b34;
+            color: white;
+            text-align: center;
+            padding: 6px 90px;
+            width: 88.15%;
+            bottom: 0;
+        }
+
+        #footer footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #footer img{
+            width: 190px;
+            height: 70px;
+        }
+        i {
+            font-size: 30px;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .j {
+            font-family: 'Times New Roman', serif;
+            animation: Fw 1s ease-in-out;
+            color: rgb(255, 255, 255);
+        }
+        .k {
+            font-family: 'Times New Roman', serif;
+            color: rgb(0, 3, 99);
+            animation: Fr 2s ease-in-out;
+        }
+        .LL {
+            color: #00145e;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-image: linear-gradient(to right, #c3e3ff, #00145e);
+            border-radius: 8px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .image {
+            flex: 1 1 calc(33.333% - 40px);
+            border: 3px solid #0f5796b7;
+            border-radius: 3px;
+            box-sizing: border-box;
+            width: 300;
+            height: 200;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 3px;
+           
+        }
+
+        .image img:active{
+            transform:scale(1.2);
+            transition: 0.4s;
+        }
+        #animation-section{
+            height: 600px;
+            width: 1430px;
+            background-image: linear-gradient(to bottom,rgb(0, 4, 88),rgb(0, 0, 21));
+            margin: 15px 30px;
+            padding: 10px;
+            
+        }
+        #animation-section h2{
+            color: rgb(3, 0, 34);
+            text-align: center;
+            padding-top: 20px;
+        }
+        #animation-section .animation-container{
+            width: 800px;
+            height: 440px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #000b39b7;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+        }
+        #animation-section .animation-container img{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            left: 30%;
+        }
+        .option-music nav{
+            display: flex;
+            justify-content: space-around;
+        }
+        .option-music nav ul{
+            display: flex;
+            list-style-type: none;
+            margin: 10px;
+            gap: 15px;
+        }
+        .option-music li button{
+            border-radius: 5px;
+            padding: 10px 15px;
+            border: none;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .option-music li button[active]{
+            transform: scale(0.95);
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 15, 126);
+        }
+        .option-music li button:hover{
+            color: rgb(255, 255, 255);
+            background-color: rgb(2, 0, 49);
+            cursor: pointer;
+        }
+        .Vd {
+            margin: 0 auto;
+            padding:2px 80px;
+            padding-top:-20px;
+        }
+        .CP {
+           max-width: 1620px;
+        }
+        @keyframes Fw {
+            0%{
+                opacity: 0;
+               transform: translateX(-200px); 
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes Fr {
+            0%{
+                opacity: 0;
+                transform: translateX(200px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+
+
+    <section id="header">
+        <nav>
+            <ul class="side-menu">
+                <li><i href="MainS.html">Ford</i></li>
+                <li><a href="MainS.html">Home</a></li>
+                <li><a href="MainS.html#gallery">Ford Vehicle Gallery</a></li>
+                <li><a href="MainS.html#animation-section">Ford Showcase</a></li>
+                <li><a href="MainS.html#about">About Us</a></li>
+            </ul>
+            <div id="user-info">
+                <a href="login.html">Login</a> |
+                <a href="register.html">Register</a>
+            </div>
+        </nav>
+    </section>
+    
+
+     <section id="introduction">
+        <a href="https://www.ford.com/"></a><img class="m" src="Ford.png" alt="">
+        <div style="max-width: 800px; margin: 50px auto; text-align: center;">
+            <div class="j">
+            <h1>Find  Your Ford</h1>
+            </div>
+            <div class="k">
+            <h1 style="font-size: 70px;">Service For You In Anytime</h1>
+            </div>
+        </div>
+        
+    </section>
+        <section id="gallery">
+        <div class="container">
+            <div class="LL">
+             <h2>Ford Vehicle Gallery[Find Any One You Like]</h2>
+             </div>
+            <div class="image-gallery">
+                <button type="button" disabled id="prevbtn" onclick="currentImageIndex = swapImagePrev(currentImageIndex, currentImageIndex -1,currentImageIndex+2)"><</button>
+                <div class="image">
+                    <img  active src="Raptor2.png">
+                </div>
+                <div class="image">
+                    <img src="Mustang.png">
+                </div>
+                <div class="image">
+                    <img src="FordGT.png">
+                </div>
+
+                
+                <div class="image" style="display: none;">
+                    <img src="Forcus.png">
+                </div>
+                <div class="image" style="display:none;">
+                    <img src="SuperDuty.png">
+                </div>
+                <div class="image" style="display:none;">
+                    <img src="Bronco.png">
+                </div>
+
+                <button type="button" id="nextbtn" onclick="currentImageIndex = swapImageNext(currentImageIndex,currentImageIndex + 1,currentImageIndex+3)">></button>
+                
+                
+            </div>
+        </div>
+        
+            <section id="animation-section">
+        <h2>Ford Showcase</h2>
+        
+        <div class="animation-container">
+            <div class="option-music">
+                <nav>
+                    <!-- space-around -->
+                    <ul>
+                        <li><button value="0" active>Raptor</button></li>
+                        <li ><button value="1">Mustang</button></li>
+                        <li ><button value="2">GT</button></li>
+                        <li><button value="3">Focus ST</button></li>
+                        <li><button value="4">RangerSuperDuty</button></li>
+                        <li><button value="5">Bronco</button></li>
+                    </ul>
+                    <!-- space between -->
+                    <div>
+
+                    </div>
+                    <!-- space-around -->
+                </nav>
+            </div>
+            <div class="Vd">
+            <video autoplay loop muted>
+               <source src="F150.mp4">
+            </video>
+            </div>
+            <audio  id="background-audio">
+                <source  src="music/audio1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+        <section id="footer">
+        <footer>
+            <div>
+                <a href="https://www.ford.com/"><img src="Ford.png" alt=""></a>
+            </div>
+            <div class="CP">
+           <a href="https://www.ford.com/">&copy; 2026 Ford Motor Company</a>
+            </div>
+        </footer>
+    </section>
+
+        <script>
+             let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image');
+        const firm=[
+            "F150.mp4",
+            "Mustang.mp4",
+            "GT.mp4",
+            "Focus ST.mp4",
+            "SuperDuty.mp4",
+            "Bronco.mp4"
+        ]
+        
+        function swapImageNext(currentImageIndex, index,indexback){
+            
+            images[currentImageIndex].style.display = 'none';
+            if(currentImageIndex >=0){
+                document.getElementById("prevbtn").removeAttribute("disabled");
+            }
+            if (indexback >= images.length-1){
+                document.getElementById("nextbtn").disabled = true;
+            }
+
+            images[indexback].style.display = 'block';
+            images[indexback].animate([
+                // keyframes
+                { transform: 'translateX(100%)', opacity: 0 },
+                { transform: 'translateX(0)', opacity: 1 }
+              ], {
+                // timing options
+                duration: 500,
+                easing: 'ease-out',
+              });
+            currentImageIndex = index;
+            return currentImageIndex;
+        }
+
+        function swapImagePrev(currentImageIndex, index,indexback){
+            
+            currentImageIndex--;
+            images[indexback].style.display = 'none';
+            if(currentImageIndex <= images.length-1){
+                document.getElementById("nextbtn").removeAttribute("disabled");
+            }
+            if (currentImageIndex <= 0){
+                document.getElementById("prevbtn").disabled = true;
+            }
+
+            images[currentImageIndex].style.display = 'block';
+            images[currentImageIndex].animate([
+                // keyframes
+                { transform: 'translateX(-100%)', opacity: 0 },
+                { transform: 'translateX(0)', opacity: 1 }
+              ], {
+                // timing options
+                duration: 500,
+                easing: 'ease-out',
+              });
+
+            currentImageIndex = index;
+            return currentImageIndex;
+        }
+                function playAudio(){
+            const audio = document.getElementById("background-audio");
+            audio.play();
+        }
+
+        const buttons_swapMusic = document.querySelectorAll('.option-music button');
+        buttons_swapMusic.forEach(button => {
+            button.addEventListener('click', () => {
+
+                buttons_swapMusic.forEach(btn => btn.removeAttribute('active'));
+                button.setAttribute('active', '');
+                const audio = document.getElementById("background-audio");
+                const video = document.querySelector('.animation-container video');
+                
+                video.src=firm[button.value];
+                audio.src = `music/audio${button.value}.mp3`;
+                audio.play();
+
+            });
+        });
+        </script>
+    
+</body>
+</html>
